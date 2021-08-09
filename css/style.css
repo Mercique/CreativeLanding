@@ -70,7 +70,7 @@ h2 {
   position: relative;
 }
 
-.header::after {
+.header .header__bg {
   content: '';
   max-width: 1600px;
   margin: 0 auto;
@@ -79,7 +79,6 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   background-image: url(../img/main-logo.jpg);
   background-repeat: no-repeat;
   background-position: right;
