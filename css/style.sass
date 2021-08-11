@@ -14,12 +14,8 @@ $navH: 140px
 // font-family: 'Montserrat', sans-serif
 // font-family: 'Poppins', sans-serif
 
-*,
-*::before,
-*::after
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+html
+    scroll-behavior: smooth
 
 body
     font-family: 'Poppins', sans-serif
@@ -27,6 +23,13 @@ body
     font-weight: 500
     line-height: 29px
     color: $blueDark
+
+*,
+*::before,
+*::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
 
 ul, ol
     list-style-type: none
@@ -45,7 +48,8 @@ a
     margin: 0 auto
 
 .menu__link, .nav__link, .play, .play-icon, .banner__play-text,
-.card, .card__link, .card, .card__info, .card__text, i
+.card, .card__link, .card, .card__info, .card__text, i, .card__price,
+.card__price-style, .card__text-style, .link, .footer__link
     transition: all .2s ease
 
 .logo__title
@@ -167,8 +171,12 @@ a
                     .banner__play-text
                         color: $blueBorder
 
+.main
+    padding: 50px 0 140px 0
+
 .about
-    padding-top: 45px
+    .container
+        max-width: 1600px
     .box
         max-width: 807px
         margin: 0 auto
@@ -189,12 +197,27 @@ a
                 &:last-of-type
                     margin-bottom: 0
                 .progress-text
-                    display: block
+                    display: flex
                     font-family: 'Lato', sans-serif
                     font-weight: 500
                     font-size: 25px
                     line-height: 37px
                     margin-bottom: 20px
+                    .proc
+                        margin-left: auto
+                        transform: translateY(10px)
+                    .web-proc
+                        padding-right: 70px
+                        color: $progressWEB
+                    .ui-proc
+                        padding-right: 40px
+                        color: $progressUI
+                    .design-proc
+                        padding-right: 100px
+                        color: $progressGD
+                    .pr-proc
+                        padding-right: 70px
+                        color: $progressPR
                 .progress
                     display: block
                     width: 100%
@@ -286,15 +309,18 @@ a
     color: $blueLight
 
 .services
-    &__box
-        max-width: 1369px
-        margin-left: auto
-        display: flex
-        justify-content: space-between
-        .box
-            width: 610px
-            text-align: left
-            margin: 0
+    &__container
+        max-width: 1600px
+        margin: 0 auto
+        .services__box
+            max-width: 1369px
+            margin-left: auto
+            display: flex
+            justify-content: space-between
+            .box
+                width: 610px
+                text-align: left
+                margin: 0
     &__card
         padding-top: 66px
         display: flex
@@ -345,3 +371,312 @@ a
                         color: $white
                     i
                         color: $blue
+
+.pricing
+    padding-top: 83px
+    .yearly
+        display: none
+    &__heading
+        display: flex
+        justify-content: center
+        text-align: center
+        .pricing__content
+            .title__text
+                font-family: 'Poppins', sans-serif
+                font-weight: 500
+                font-size: 20px
+                line-height: 32px
+                letter-spacing: 0.05em
+                color: $blueLight
+            .subtitle
+                font-family: 'Lato', sans-serif
+                font-weight: 700
+                font-size: 35px
+                line-height: 49px
+                color: $blueDark
+                margin: 22px 0 32px 0
+            .content
+                display: flex
+                justify-content: space-between
+                width: 353px
+                padding: 10px
+                margin-bottom: 60px
+                border: 1px solid $blue
+                .label
+                    .text
+                        display: block
+                        cursor: pointer
+                        padding: 10px 20px
+                        font-size: 18px
+                        line-height: 29px
+                        color: $blueLight
+                    .input
+                        display: none
+                        &:checked + .text
+                            color: $white
+                            background-color: $blue
+                            border-radius: 5px
+    &__card
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 140px
+        .card
+            width: 360px
+            height: 613px
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            position: relative
+            overflow: hidden
+            border-radius: 10px
+            box-shadow: 0px 4px 30px rgba(153, 153, 153, 0.14)
+            .corner__box
+                display: none
+            &:hover
+                box-shadow: none
+                color: $white
+                background: linear-gradient(180deg, #D9315A 0%, #F3678A 100%)
+                span
+                    color: $white
+                .corner__box
+                    width: 74px
+                    height: 22px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    position: absolute
+                    top: 11px
+                    left: -15px
+                    transform: rotate(-45deg)
+                    background-color: #11BB92
+                    &-text
+                        font-weight: normal
+                        font-size: 9px
+                        line-height: 14px
+                        user-select: none
+                        color: $blueDark
+                    &::before
+                        content: ''
+                        display: block
+                        width: 9px
+                        height: 5px
+                        position: absolute
+                        left: -3px
+                        bottom: -2px
+                        transform: rotate(45deg)
+                        background-color: #D95374
+                    &::after
+                        content: ''
+                        display: block                    
+                        width: 5px
+                        height: 8px
+                        position: absolute
+                        right: -2px
+                        bottom: -3px
+                        transform: rotate(45deg)
+                        background-color: #D95374
+                .card__link
+                    color: $white
+                    background-color: $blue
+            &__up
+                width: 100%
+                height: 129px
+                display: flex
+                align-items: center
+                justify-content: center
+                border-bottom: 1px solid rgba(153, 153, 153, 0.14)
+                margin-bottom: 38px
+                .card__title
+                    margin: 0
+            &__price
+                font-family: 'Poppins', sans-serif
+                font-size: 18px
+                line-height: 29px
+                color: $blueDark
+                &-style
+                    font-family: 'Lato', sans-serif
+                    font-weight: 500
+                    font-size: 35px
+                    line-height: 49px
+                    color: $blueDark
+            &__text-style
+                font-family: 'Poppins', sans-serif
+                font-size: 18px
+                font-weight: normal
+                line-height: 29px
+                margin: 15px 0 40px 0
+                color: $blueLight
+            &__text
+                font-family: 'Poppins', sans-serif
+                font-weight: 500
+                font-size: 20px
+                line-height: 32px
+                margin-bottom: 14px
+                color: $blueLight
+                &:last-of-type
+                    margin-bottom: 29px
+            &__link
+                font-family: 'Lato', sans-serif
+                font-weight: 700
+                font-size: 25px
+                line-height: 37px
+                padding: 15px 30px
+                border-radius: 5px
+                color: $blue
+                border: 1px solid $blue
+
+.review
+    .box
+        max-width: 725px
+    &__content
+        margin-top: 70px
+        padding: 46px 0
+        border-radius: 10px
+        border: 1px solid rgba(5, 12, 38, .1)
+        .content__up
+            display: flex
+            justify-content: space-around
+            flex-wrap: wrap
+            .speech
+                max-width: 418px
+                &__text
+                    display: flex
+                    .speech__img
+                        width: 42px
+                        height: 35px
+                        opacity: .1
+                        img
+                            width: inherit
+                    .speech__text-italic
+                        padding: 14px 0 30px 5px
+                        &-text
+                            font-style: italic
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 29px
+                &__author
+                    display: flex
+                    align-items: center
+                    margin-bottom: 50px
+                    .author__img
+                        img
+                            width: inherit
+                    .author__info
+                        margin-left: 30px
+                        .author__name
+                            display: block
+                            font-weight: 500
+                            font-size: 20px
+                            line-height: 32px
+                        .author__work
+                            display: block
+                            font-weight: normal
+                            font-size: 16px
+                            line-height: 26px
+                            color: $blueLight
+        .content__bottom
+            display: flex
+            justify-content: center
+            .bottom__box
+                width: 110px
+                display: flex
+                justify-content: space-between
+                .bottom__label
+                    .bottom__input
+                        display: none
+                        &:checked + .check
+                            width: 40px
+                            background-color: rgba(57, 136, 255, 1)
+                    .check
+                        display: block
+                        width: 20px
+                        height: 11px
+                        cursor: pointer
+                        border-radius: 20px
+                        background-color: rgba(57, 136, 255, .1)
+
+.db
+    display: block
+
+.dn
+    display: none
+
+.footer
+    height: 427px
+    padding-top: 75px
+    color: $white
+    background-color: $blueDark
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        .footer__nav
+            display: flex
+            justify-content: space-between
+            .footer__box
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                .footer__title
+                    margin-bottom: 20px
+                    font-weight: 500
+                    font-size: 20px
+                    line-height: 32px
+                .footer__email
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 29px
+                    opacity: .7
+                .footer__text
+                    max-width: 318px
+                    font-weight: normal
+                    opacity: .7
+                    margin-top: 30px
+                .footer__list
+                    .link
+                        font-weight: normal
+                        font-size: 16px
+                        line-height: 26px
+                        opacity: .7
+                        padding: 5px 0
+                        &:hover
+                            opacity: 1
+                .social__box
+                    display: flex
+                    margin: 10px 0 30px 0
+                    .social__link
+                        margin-right: 25px
+                        .social__img
+                            width: inherit
+                .footer__link
+                    font-weight: 500
+                    font-size: 20px
+                    line-height: 32px
+                    padding: 15px 30px
+                    border-radius: 5px
+                    border: 1px solid transparent
+                    background-color: $blue
+                    &:hover
+                        border: 1px solid $blue
+                        color: $blue
+                        background-color: $white
+        .footer__copy
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: auto
+            border-top: 1px solid rgba(255, 255, 255, .1)
+            .copyright
+                font-family: 'Montserrat', sans-serif
+                font-weight: normal
+                font-size: 18px
+                line-height: 29px
+                padding: 30px 0
+                color: $blueLight
+
+@media (max-width: 1160px)
+    .container
+        padding: 0 10px
