@@ -1,8 +1,8 @@
-# new project
+# Creative landing page
 
 I practice web developing
-Create new Creative landing page
 
 Stack:
 * HTML5
 * CSS3 (SASS)
+* JS
