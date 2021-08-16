@@ -26,7 +26,7 @@
                     <li class="menu__list"><a class="menu__link" href="#services">Services</a></li>
                     <li class="menu__list"><a class="menu__link" href="#pricing">Pricing</a></li>
                 </ul>
-                <a class="nav__link" href="#">Contact</a>
+                <a class="nav__link" href="#contact">Contact</a>
             </nav>
             <div class="header__banner container">
                 <div class="banner__left">
@@ -221,100 +221,55 @@
                         <h3 class="subtitle">OUR PRICING PLAN</h3>
                         <div class="content">
                             <label class="label">
-                                <input class="input" type="radio" name="1" value="Yearly" onclick="swapPrice(this.value);">
+                                <input class="input" type="radio" name="1" onclick="swapPrice('14', '24', '44')">
                                 <span class="text">Yearly Billing</span>
                             </label>
                             <label class="label">
-                                <input class="input" type="radio" name="1" value="Monthly" onclick="swapPrice(this.value);" checked>
+                                <input class="input" type="radio" name="1" onclick="swapPrice('20', '30', '50')" checked>
                                 <span class="text">Monthly billing</span>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="monthly" id="monthly">
-                    <div class="pricing__card">
-                        <div class="card">
-                            <div class="card__up">
-                                <h3 class="card__title">BASIC</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">20</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">25 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">15 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
+                <div class="pricing__card">
+                    <div class="card">
+                        <div class="card__up">
+                            <h3 class="card__title">BASIC</h3>
                         </div>
-                        <div class="card">
-                            <div class="corner__box">
-                                <span class="corner__box-text">Best Deal</span>
-                            </div>
-                            <div class="card__up">
-                                <h3 class="card__title">Business</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">30</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">30 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">25 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
-                        </div>
-                        <div class="card">
-                            <div class="card__up">
-                                <h3 class="card__title">Premium</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">50</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">50 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">40 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
-                        </div>
+                        <span class="card__price">$ <span class="card__price-style" id="priceSwap1">20</span></span>
+                        <span class="card__text-style">Per of month</span>
+                        <span class="card__text">25 GB Disk Space</span>
+                        <span class="card__text">Mail Support</span>
+                        <span class="card__text">15 Domains</span>
+                        <span class="card__text">No License</span>
+                        <a href="#" class="card__link">Purchase</a>
                     </div>
-                </div>
-                <div class="yearly" id="yearly">
-                    <div class="pricing__card">
-                        <div class="card">
-                            <div class="card__up">
-                                <h3 class="card__title">BASIC</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">14</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">25 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">15 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
+                    <div class="card">
+                        <div class="corner__box">
+                            <span class="corner__box-text">Best Deal</span>
                         </div>
-                        <div class="card">
-                            <div class="corner__box">
-                                <span class="corner__box-text">Best Deal</span>
-                            </div>
-                            <div class="card__up">
-                                <h3 class="card__title">Business</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">20</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">30 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">25 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
+                        <div class="card__up">
+                            <h3 class="card__title">Business</h3>
                         </div>
-                        <div class="card">
-                            <div class="card__up">
-                                <h3 class="card__title">Premium</h3>
-                            </div>
-                            <span class="card__price">$ <span class="card__price-style">30</span></span>
-                            <span class="card__text-style">Per of month</span>
-                            <span class="card__text">50 GB Disk Space</span>
-                            <span class="card__text">Mail Support</span>
-                            <span class="card__text">40 Domains</span>
-                            <span class="card__text">No License</span>
-                            <a href="#" class="card__link">Purchase</a>
+                        <span class="card__price">$ <span class="card__price-style" id="priceSwap2">30</span></span>
+                        <span class="card__text-style">Per of month</span>
+                        <span class="card__text">30 GB Disk Space</span>
+                        <span class="card__text">Mail Support</span>
+                        <span class="card__text">25 Domains</span>
+                        <span class="card__text">No License</span>
+                        <a href="#" class="card__link">Purchase</a>
+                    </div>
+                    <div class="card">
+                        <div class="card__up">
+                            <h3 class="card__title">Premium</h3>
                         </div>
+                        <span class="card__price">$ <span class="card__price-style" id="priceSwap3">50</span></span>
+                        <span class="card__text-style">Per of month</span>
+                        <span class="card__text">50 GB Disk Space</span>
+                        <span class="card__text">Mail Support</span>
+                        <span class="card__text">40 Domains</span>
+                        <span class="card__text">No License</span>
+                        <a href="#" class="card__link">Purchase</a>
                     </div>
                 </div>
             </div>
@@ -327,128 +282,122 @@
                     <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius semper velit non nulla adipiscing nisl vel mi elementum.</p>
                 </div>
                 <div class="review__content">
-                    <div class="db" id="speech1">
-                        <div class="content__up">
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Over the years, The Agency Creative have worked with us on everything from brand design, video, photography.</p>
-                                    </div>
+                    <div class="content__up" id="speech__swap1">
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men2.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Corey Herwitz</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Over the years, The Agency Creative have worked with us on everything from brand design, video, photography.</p>
                                 </div>
                             </div>
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Always a pleasure to work with The Agency Creative. Such professional and happy people and you know.</p>
-                                    </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/men2.png" alt="men1">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men1.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Jakob Calzoni</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="author__info">
+                                    <span class="author__name">Corey Herwitz</span>
+                                    <span class="author__work">Marketing Officer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
+                                </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Always a pleasure to work with The Agency Creative. Such professional and happy people and you know.</p>
+                                </div>
+                            </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/men1.png" alt="men1">
+                                </div>
+                                <div class="author__info">
+                                    <span class="author__name">Jakob Calzoni</span>
+                                    <span class="author__work">Marketing Officer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="dn" id="speech2">
-                        <div class="content__up">
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis deleniti voluptates velit.</p>
-                                    </div>
+                    <div class="content__up" id="speech__swap2">
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men2.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Corey Herwitz</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                                 </div>
                             </div>
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique asperiores doloribus ratione excepturi.</p>
-                                    </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/sp2.jpg" alt="men1">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men1.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Jakob Calzoni</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="author__info">
+                                    <span class="author__name">Lorem, ipsum.</span>
+                                    <span class="author__work">Marketing Officer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
+                                </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/sp2_2.jpg" alt="men1">
+                                </div>
+                                <div class="author__info">
+                                    <span class="author__name">Lorem, ipsum.</span>
+                                    <span class="author__work">Marketing Officer</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="dn" id="speech3">
-                        <div class="content__up">
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ratione cum in voluptatem iure iste!</p>
-                                    </div>
+                    <div class="content__up" id="speech__swap3">
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men2.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Corey Herwitz</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui voluptas error!3</p>
                                 </div>
                             </div>
-                            <div class="speech">
-                                <div class="speech__text">
-                                    <div class="speech__img">
-                                        <img src="img/quote.png" alt="quote">
-                                    </div>
-                                    <div class="speech__text-italic">
-                                        <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid alias, earum fuga nihil laborum.</p>
-                                    </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/sp3.jpg" alt="men1">
                                 </div>
-                                <div class="speech__author">
-                                    <div class="author__img">
-                                        <img src="img/men1.png" alt="men1">
-                                    </div>
-                                    <div class="author__info">
-                                        <span class="author__name">Jakob Calzoni</span>
-                                        <span class="author__work">Marketing Officer</span>
-                                    </div>
+                                <div class="author__info">
+                                    <span class="author__name">33333 33333</span>
+                                    <span class="author__work">Marketing Officer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speech">
+                            <div class="speech__text">
+                                <div class="speech__img">
+                                    <img src="img/quote.png" alt="quote">
+                                </div>
+                                <div class="speech__text-italic">
+                                    <p class="speech__text-italic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cum molestias perspiciatis?3</p>
+                                </div>
+                            </div>
+                            <div class="speech__author">
+                                <div class="author__img">
+                                    <img src="img/sp3_3.jpg" alt="men1">
+                                </div>
+                                <div class="author__info">
+                                    <span class="author__name">33333 33333</span>
+                                    <span class="author__work">Marketing Officer</span>
                                 </div>
                             </div>
                         </div>
@@ -475,7 +424,7 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__contacts">
+        <div class="footer__contacts" id="contact">
             <div class="container">
                 <form action="#" class="footer__form">
                     <div class="form__left">

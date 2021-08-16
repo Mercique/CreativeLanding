@@ -1,41 +1,24 @@
-function swapPrice(value) {
-    var yearly = document.getElementById("yearly");
-    var monthly = document.getElementById("monthly");
-    if (value == 'Yearly') {
-      yearly.className = 'db';
-    } else {
-      yearly.className = 'dn';
-    }
-    if (value == 'Monthly') {
-      monthly.className = 'db';
-    } else {
-      monthly.className = 'dn';
-    }
+function swapPrice(val1, val2, val3) {
+  document.getElementById('priceSwap1').innerHTML = val1
+  document.getElementById('priceSwap2').innerHTML = val2
+  document.getElementById('priceSwap3').innerHTML = val3
 }
 
-function reviewSwap(val) {
-    var s1 = document.getElementById("speech1");
-    var s2 = document.getElementById("speech2");
-    var s3 = document.getElementById("speech3");
-    if (val == 'tap1') {
-        s1.className = 'db';
-        s2.className = 'dn';
-        s3.className = 'dn';
-    } else {
-        s1.className = 'dn';
-    }
-    if (val == 'tap2') {
-        s2.className = 'db';
-        s1.className = 'dn';
-        s3.className = 'dn';
-    } else {
-        s2.className = 'dn';
-    }
-    if (val == 'tap3') {
-        s3.className = 'db';
-        s1.className = 'dn';
-        s2.className = 'dn';
-    } else {
-        s3.className = 'dn';
-    }
+function reviewSwap(value) {
+  var r1 = document.getElementById('speech__swap1')
+  var r2 = document.getElementById('speech__swap2')
+  var r3 = document.getElementById('speech__swap3')
+  if (value == 'tap1') {
+    r1.style.display = 'flex'
+    r2.style.display = 'none'
+    r3.style.display = 'none'
+  } else if (value == 'tap2') {
+    r1.style.display = 'none'
+    r2.style.display = 'flex'
+    r3.style.display = 'none'
+  } else if (value == 'tap3') {
+    r1.style.display = 'none'
+    r2.style.display = 'none'
+    r3.style.display = 'flex'
+  }
 }
